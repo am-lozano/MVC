@@ -15,11 +15,7 @@ class Equipo {
      */
   constructor(id, nombre, ciudad, estadio) {
     // Validaciones
-    if (typeof id !== 'number' || id <= 0) {
-      throw new Error("El ID debe ser un número positivo");
-    }else{
-      this.id = id;
-    }
+    this.id = id;
     if (typeof nombre !== 'string' || nombre.trim() === '') {
       throw new Error("El nombre debe ser una cadena no vacía");
     }else{
