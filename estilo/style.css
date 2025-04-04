@@ -1,0 +1,16 @@
+.contenedor {
+    background-color: aqua;
+    text-decoration: none;
+}
+
+#contenedorNav {
+    height: 20%;
+}
+
+#cuerpo {
+    height: 60%;
+}
+
+#copyright {
+    height: 20%;
+}
