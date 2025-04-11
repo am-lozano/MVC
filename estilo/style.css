@@ -1,16 +1,10 @@
-.contenedor {
-    background-color: aqua;
-    text-decoration: none;
+.navegacion {
+    background-color: #ffa500;
+    height: 100px;
+    padding-top: 30px;
 }
 
-#contenedorNav {
-    height: 20%;
-}
-
-#cuerpo {
-    height: 60%;
-}
-
-#copyright {
-    height: 20%;
+.separador {
+    border-color: #ffa500;
+    border: 1px solid #ffa500;
 }

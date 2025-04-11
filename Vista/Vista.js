@@ -18,6 +18,59 @@ class Vista {
         this.formInput.value = "";
     }
 
+    // anadir funciones para formularios
+    // funcion para anadir el formulario para el jugador
+    mostrarFormJug() {
+        const fila = document.createElement("form");
+        fila.innerHTML = `
+        <form>
+            <fieldset>
+                <label for="nombre"> Nombre </label>
+                <input type="text" id="#" name="nombre">
+
+                <label for="edad"> Edad </label>
+                <input type="number" id="#" name="edad">
+
+                <label for="posicion"> Posicion </label>
+                <input type="text" id="#" name="posicion">
+
+                <label for="fecha"> Fecha de nacimiento </label>
+                <input type="text" id="#" name="fecha">
+            </fieldset>
+        </form>
+        `
+    }
+
+    // funcion para anadir el formulario para el equipo
+    mostrarFormEquipo() {
+        const fila = document.createElement("form");
+        false.innerHTML = `
+        <form>
+            <fieldset>
+                <label for="nombre"> Nombre </label>
+                <input type="text" id="#" name="nombre">
+
+                <label for="cidudad"> Ciudad </label>
+                <input type="text" id="#" name="ciudad">
+
+                <label for="posicion"> Posicion </label>
+                <input type="text" id="#" name="posicion">
+            </fieldset>
+        </form>
+        `
+    }
+
+    /**
+     * @param {*} falta
+     * anadir formularios para actualizar datos
+     * 
+     * @param {*} duda
+     * actualizarInfoJugador() y cambiarEquipo() ?????????????
+     * 
+     * @param {*} falta
+     * mostrar los jugadores con card bootstrap, y su info debajo
+     */
+
     // funcion para mostrar los jugadores
     renderizarJug(jugador) {
         this.lista.innerHTML = "";
