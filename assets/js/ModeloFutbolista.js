@@ -14,9 +14,8 @@ class ModeloFutbolista {
 
     // Agregar un futbolista y actualizar en el localStorage
     agregarFutbolista(nombre, edad, posicion, fechanacimiento) {
-        let futbolista = new (this.id++, nombre, edad, posicion, fechanacimiento);
-        this.futbolistas.push(futbolista);
-    }
+       this.futbolistas.push(this.id++, nombre, edad, posicion, fechanacimiento);
+    }   
 
     //Método para actualizar un futbolista por ID y actualizar el localStorage
     actualizarFutbolista(id, futbolistaActualizado) {
