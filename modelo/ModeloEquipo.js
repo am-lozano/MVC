@@ -43,6 +43,11 @@ class ModeloEquipo {
         return eliminado;
     }
 
+    // Método para filtrar equipos por ciudad
+    filtrarEquiposPorCiudad(ciudad) {
+        return this.equipos.filter(e => e.ciudad === ciudad);
+    }
+
     //Método para mostrar todos los equipos
     mostrarEquipos() {
         return this.equipos;
