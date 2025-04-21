@@ -38,43 +38,65 @@
 
     <!-- cuerpo -->
     <div id="cuerpo">
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+
+        <div id="nuevo">
+
+            <!-- formulario equipo -->
+            <div>
+                <form id="formEquipo">
+                    <fieldset>
+                        <label for="nombre"> Nombre </label>
+                        <input type="text" id="nombreEquipo" name="nombre">
+        
+                        <label for="cidudad"> Ciudad </label>
+                        <input type="text" id="ciudadEquipo" name="ciudad">
+        
+                        <label for="estadio"> Estadio </label>
+                        <input type="text" id="estadioEquipo" name="estadio">
+    
+                        <button type="submit" id="botonAnadirEquipo"> Agregar </button>
+                    </fieldset>
+                </form>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/indice/carrusel1.jpg" class="d-block w-100">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/indice/carrusel2.png" class="d-block w-100">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/indice/carrusel3.jpg" class="d-block w-100">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
+    
+            <br>
+    
+            <!-- formulario jugador -->
+            <div>
+                <form id="formEJugador">
+                    <fieldset>
+                        <label for="nombre"> Nombre </label>
+                        <input type="text" id="nombreJugador" name="nombre">
+           
+                        <label for="edad"> Edad </label>
+                        <input type="number" id="edadJugador" name="edad">
+           
+                        <label for="posicion"> Posicion </label>
+                        <input type="text" id="posicionJugador" name="posicion">
+           
+                        <label for="fecha"> Fecha de nacimiento </label>
+                        <input type="text" id="fechaJugador" name="fecha">
+    
+                        <button type="submit" id="botonAnadirJugador"> Agregar </button>
+                    </fieldset>
+                </form>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+
         </div>
+
+        <div id="eliminar">
+
+        </div>
+
+        <div id="modificar">
+
+        </div>
+
+        botones -> eliminar y modificar
+        listas -> equipos y jugadores
+        filtrar ->  j = equipo, posicion
+                    e = ciudad
+
     </div>
 
     <!-- coplyright -->
