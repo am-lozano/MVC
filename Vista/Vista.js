@@ -21,7 +21,7 @@ class Vista {
     }
 
     // funcion para limpiar el texto anterior del formulario
-   limpiarForm() {
+limpiarForm() {
         this.inputNombreE.value = "";
         this.inputCiudadE.value = "";
         this.inputEstadioE.value = "";
