@@ -42,6 +42,7 @@ limpiarForm() {
             <td> ${element.edad} </td>
             <td> ${element.posicion} </td>
             <td> ${element.fechanacimiento} </td>
+            <td> ${element.nombreEquipo} </td>
             <td> <button class="success-btn" id="${element.id}">Asignar Equipo</button> </td>
             <td> <button class="success-btn" id="${element.id}">Eliminar Futbolista</button> </td>
             `;

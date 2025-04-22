@@ -66,15 +66,6 @@ class Controlador {
         return nombre && ciudad && estadio; // Validar que todos los campos estén completos
     }
 
-    // Metodo para asignar un futbolista a un equipo
-    asignarFutbolistaAEquipo(idFutbolista, idEquipo) {
-        if (this.modeloFutbolista.asignarEquipo(idFutbolista, idEquipo)) {
-            this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas());
-        } else {
-            alert("Error al asignar el futbolista al equipo.");
-        }
-    }
-
     // Metodo para filtrar futbolistas por equipo
 
     // Metodo para filtrar futbolistas por posicion
@@ -102,14 +93,23 @@ class Controlador {
 
     // Metodo para asignar equipo a un futbolista
     asignarEquipoAFutbolista(idFutbolista, nombreEquipo) {
-        if (this.modeloFutbolista.asignarEquipo(idFutbolista, nombreEquipo)) {
+        let equipo = this.modeloEquipo.buscaEquiposPorNombre(nombreEquipo); // Buscar el equipo por nombre
+        if (equipo !== null) {
+            this.modeloFutbolista.asignarEquipo(idFutbolista, equipo.nombre); // Asignar el equipo al futbolista
             this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas());
         } else {
-            alert("Error al asignar el futbolista al equipo.");
+            alert("Error al asignar el futbolista al equipo, el equipo no existe.");
         }
     }
 
     // Metodo para actualizar un equipo
+    modificarEquipo(id, nombre, ciudad, estadio) {
+        const equipoActualizado = { id, nombre, ciudad, estadio }; // Crear un objeto con los datos actualizados del equipo
+        this.modeloEquipo.actualizarEquipo(id, equipoActualizado); // Actualizar el equipo en el modelo
+        this.vista.renderizarEquipos(this.modeloEquipo.mostrarEquipos()); // Renderizar los equipos actualizados
+        console.log(this.modeloEquipo.mostrarEquipos()); // Mostrar equipos en la consola
+    }
+
 
     // Metodo para comprobar el boton de futbolista
    comprobarBotonFutbolista(event) {
@@ -119,7 +119,7 @@ class Controlador {
         } else if (event.target.tagName === "BUTTON" && event.target.textContent === "Asignar Equipo") {
             const id = parseInt(event.target.getAttribute("id")); // Obtener el id del futbolista
             const nombreEquipo = prompt("Ingrese el nombre del equipo al que desea asignar el futbolista:"); // Solicitar el nombre del equipo
-            this.asignarFutbolistaAEquipo(id, nombreEquipo); // Llamar al método para asignar el futbolista al equipo
+            this.asignarEquipoAFutbolista(id, nombreEquipo); // Llamar al método para asignar el equipo al futbolista
         }
     }
 
@@ -128,10 +128,13 @@ class Controlador {
         if (event.target.tagName === "BUTTON" && event.target.textContent === "Eliminar Equipo") {
             const id = parseInt(event.target.getAttribute("id")); // Obtener el id del equipo
             this.eliminarEquipo(id); // Llamar al método para eliminar el equipo
-        } else if (event.target.tagName === "BUTTON" && event.target.textContent === "Agregar Futbolista") {
+        } else if (event.target.tagName === "BUTTON" && event.target.textContent === "Modificar Equipo") {
             const id = parseInt(event.target.getAttribute("id")); // Obtener el id del equipo
-            const idFutbolista = prompt("Ingrese el ID del futbolista que desea agregar al equipo:"); // Solicitar el ID del futbolista
-            this.asignarFutbolistaAEquipo(idFutbolista, id); // Llamar al método para asignar el futbolista al equipo
+            const nombre = prompt("Ingrese el nuevo nombre del equipo:"); // Solicitar el nuevo nombre del equipo
+            const ciudad = prompt("Ingrese la nueva ciudad del equipo:"); // Solicitar la nueva ciudad del equipo
+            const estadio = prompt("Ingrese el nuevo estadio del equipo:"); // Solicitar el nuevo estadio del equipo
+            this.modificarEquipo(id, nombre, ciudad, estadio); // Llamar al método para modificar el equipo
+            this.vista.renderizarEquipos(this.modeloEquipo.mostrarEquipos()); // Renderizar los equipos actualizados
         }
     }
 }
