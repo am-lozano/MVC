@@ -14,7 +14,7 @@ class ModeloFutbolista {
 
     // Agregar un futbolista y actualizar en el localStorage
     agregarFutbolista(nombre, edad, posicion, fechanacimiento) {
-       this.futbolistas.push(this.id++, nombre, edad, posicion, fechanacimiento);
+       this.futbolistas.push({ id: this.id++, nombre, edad, posicion, fechanacimiento });
     }   
 
     //Método para actualizar un futbolista por ID y actualizar el localStorage
@@ -30,7 +30,7 @@ class ModeloFutbolista {
 
     // Eliminar un futbolista por ID y actualizar el localStorage
     eliminarFutbolista(id) {
-        let elimnado = false;
+        let eliminado = false;
         this.futbolistas.forEach(futbolista => {
             if (futbolista.id === id) {
                 this.futbolistas.splice(this.futbolistas.indexOf(futbolista), 1);

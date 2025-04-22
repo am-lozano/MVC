@@ -57,7 +57,7 @@
                         <label for="estadio"> Estadio </label>
                         <input type="text" id="estadioEquipo" name="estadio">
     
-                        <button type="submit" id="botonAnadirEquipo">Agregar</button>
+                        <button type="button" id="botonAnadirEquipo">Agregar</button>
                     </fieldset>
                 </form>
             </div>
@@ -84,7 +84,7 @@
                         <label for="fecha"> Fecha de nacimiento </label>
                         <input type="text" id="fechaFutbolista" name="fecha">
     
-                        <button type="submit" id="botonAnadirFutbolista">Agregar</button>
+                        <button type="button" id="botonAnadirFutbolista">Agregar</button>
                     </fieldset>
                 </form>
             </div>
@@ -114,9 +114,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoY9F0Z8bJp1Uan5lHcDESN6z9UU1oBOmRWjFAd/6iGd9xD"
         crossorigin="anonymous"></script>
-    <script src="assets/js/Modelo.js">  </script>
-    <script src="Vista/Vista.js">  </script>
-    <script src="#">  </script>
+    <script src="modelo/ModeloEquipo.js">  </script>
+    <script src="modelo/ModeloFutbolista.js">  </script>
+    <script src="controlador/Controlador.js">  </script>
+    <script src="vista/Vista.js">  </script>
+    <script> 
+        // Instanciar el controlador de forma global
+        function inicializar() {
+            const controller = new Controlador();
+        }
+        
+        // Inicializar el controlador al iniciar
+        window.onload = inicializar();
+    </script>
 
 </body>
 

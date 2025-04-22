@@ -27,13 +27,14 @@ class Vista {
 
     // funcion para limpiar el texto anterior del formulario
     limpiarForm() {
-        this.formInput.value = "";
+        this.formF.value = "";
+        this.formE.value = "";
     }
 
     // funcion para mostrar los futbolistas
-    renderizarFutbolista(futbolistas) {
-        this.lista.innerHTML = "";
-        futbolista.array.forEach(element => {
+    renderizarFutbolistas(futbolistas) {
+        this.listaFutbolistas.innerHTML = "";
+        futbolistas.forEach(element => {
             const fila = document.createElement("tr");
             fila.id = element.id;
             fila.innerHTML = `
@@ -44,14 +45,14 @@ class Vista {
             <td> <button class="success-btn" data-id="#${element.id}">Asignar Equipo</button> </td>
             <td> <button class="success-btn" data-id="#${element.id}">Eliminar Futbolista</button> </td>
             `;
-            this.lista.appendChild(fila);
+            this.listaFutbolistas.appendChild(fila);
         });
     }
 
     // funcion para mostrar los equipos
     renderizarEquipos(equipos) {
-        this.lista.innerHTML = "";
-        equipo.array.forEach(element => {
+        this.listaEquipos.innerHTML = "";
+        equipos.forEach(element => {
             const fila = document.createElement("tr");
             fila.id = element.id;
             fila.innerHTML = `
@@ -59,9 +60,9 @@ class Vista {
             <td> ${element.ciudad} </td>
             <td> ${element.estadio} </td>
             <td> <button class="success-btn" data-id="#${element.id}">Agregar Futbolista</button> </td>
-            <td> <button class="success-btn" data-id="#${element.id}">Eliminar Futbolista</button> </td>
+            <td> <button class="success-btn" data-id="#${element.id}">Eliminar Equipo</button> </td>
             `;
-            this.lista.appendChild(fila);
+            this.listaEquipos.appendChild(fila);
         });
     }
 

@@ -14,7 +14,7 @@ class ModeloEquipo {
 
     // Agregar un equipo y actualizar en el localStorage
     agregarEquipo(nombre, ciudad, estadio) {
-        this.equipos.push(this.id++, nombre, ciudad, estadio);
+        this.equipos.push({ id: this.id++, nombre, ciudad, estadio });
         localStorage.setItem('equipos', JSON.stringify(this.equipos));
     }
 

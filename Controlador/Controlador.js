@@ -1,10 +1,11 @@
 class Controlador {
+    
     constructor() {
         this.modeloEquipo = new ModeloEquipo(); // Instancia del modelo de equipo
         this.modeloFutbolista = new ModeloFutbolista(); // Instancia del modelo de futbolista
         this.vista = new Vista(); // Instancia de la vista
 
-        this.vista.renderizarFutbolista(this.modeloFutbolista.mostrarFutbolistas()); // Renderizar los futbolistas iniciales
+        this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas()); // Renderizar los futbolistas iniciales
         this.vista.renderizarEquipos(this.modeloEquipo.mostrarEquipos()); // Renderizar los equipos iniciales
 
         // Agregar el evento click al botón "guardar" para futbolistas
@@ -30,8 +31,9 @@ class Controlador {
         // Validar los campos de futbolista
         if (this.validarCamposFutbolista(nombre, edad, posicion, fechanacimiento)) {
             this.modeloFutbolista.agregarFutbolista(nombre, edad, posicion, fechanacimiento);
-            this.vista.renderizarFutbolista(this.modeloFutbolista.mostrarFutbolistas());
-            this.vista.limpiarForm(); // Limpiar el formulario después de agregar
+            this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas());
+            console.log(this.modeloFutbolista.mostrarFutbolistas()); // Mostrar futbolistas en la consola
+            this.vista.limpiarForm(); // Limpiar el formulario después de agregar el futbolista
         } else {
             alert("Por favor, completa todos los campos correctamente.");
         }
@@ -52,7 +54,8 @@ class Controlador {
         if (this.validarCamposEquipo(nombre, ciudad, estadio)) {
             this.modeloEquipo.agregarEquipo(nombre, ciudad, estadio);
             this.vista.renderizarEquipos(this.modeloEquipo.mostrarEquipos());
-            this.vista.limpiarForm(); // Limpiar el formulario después de agregar
+            console.log(this.modeloEquipo.mostrarEquipos()); // Mostrar equipos en la consola
+            this.vista.limpiarForm(); // Limpiar el formulario después de agregar el equipo
         } else {
             alert("Por favor, completa todos los campos correctamente.");
         }
@@ -66,7 +69,7 @@ class Controlador {
     // Metodo para asignar un futbolista a un equipo
     asignarFutbolistaAEquipo(idFutbolista, idEquipo) {
         if (this.modeloFutbolista.asignarEquipo(idFutbolista, idEquipo)) {
-            this.vista.renderizarFutbolista(this.modeloFutbolista.mostrarFutbolistas());
+            this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas());
         } else {
             alert("Error al asignar el futbolista al equipo.");
         }
@@ -81,7 +84,7 @@ class Controlador {
     // Metodo para eliminar un futbolista
     eliminarFutbolista(id) {
         if (this.modeloFutbolista.eliminarFutbolista(id)) {
-            this.vista.renderizarFutbolista(this.modeloFutbolista.mostrarFutbolistas());
+            this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas());
         } else {
             alert("Error al eliminar el futbolista.");
         }
@@ -124,11 +127,3 @@ class Controlador {
         }
     }
 }
-
-// Instanciar el controlador de forma global
-function inicializar() {
-    const controller = new Controlador();
-}
-
-// Inicializar el controlador al iniciar
-window.onload = inicializar();
