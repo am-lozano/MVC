@@ -22,7 +22,11 @@ class Controlador {
 
     // Método para agregar un futbolista, validando los campos de entrada
 
+    // Método para validar los campos de futbolista
+
     // Metodo para agregar un equipo, validando los campos de entrada
+
+    // Método para validar los campos de equipo
 
     // Metodo para asignar un futbolista a un equipo
 
