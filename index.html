@@ -34,27 +34,34 @@
         </ul>
     </div>
 
-    <hr class="separador">
+    <!-- <hr class="separador"> -->
 
     <!-- cuerpo -->
     <div id="cuerpo">
 
-        <div id="nuevo">
+        <div id="formularios">
 
             <!-- formulario equipo -->
             <div>
+
+                <h2> Agregar, Modificar o Eliminar </h2>
+
                 <form id="formEquipo">
                     <fieldset>
                         <label for="nombre"> Nombre </label>
                         <input type="text" id="nombreEquipo" name="nombre">
-        
+    
                         <label for="cidudad"> Ciudad </label>
                         <input type="text" id="ciudadEquipo" name="ciudad">
-        
+    
                         <label for="estadio"> Estadio </label>
                         <input type="text" id="estadioEquipo" name="estadio">
     
                         <button type="submit" id="botonAnadirEquipo"> Agregar </button>
+    
+                        <button type="submit" id="botonEliminarEquipo"> Eliminar </button>
+    
+                        <button type="submit" id="botonModificarEquipo"> Modificar </button>
                     </fieldset>
                 </form>
             </div>
@@ -67,35 +74,41 @@
                     <fieldset>
                         <label for="nombre"> Nombre </label>
                         <input type="text" id="nombreJugador" name="nombre">
-           
+    
                         <label for="edad"> Edad </label>
                         <input type="number" id="edadJugador" name="edad">
-           
+    
                         <label for="posicion"> Posicion </label>
                         <input type="text" id="posicionJugador" name="posicion">
-           
+    
                         <label for="fecha"> Fecha de nacimiento </label>
                         <input type="text" id="fechaJugador" name="fecha">
     
                         <button type="submit" id="botonAnadirJugador"> Agregar </button>
+    
+                        <button type="submit" id="botonEliminarJugador"> Eliminar </button>
+                        
+                        <button type="submit" id="botonModificarJugador"> Modificar </button>
                     </fieldset>
                 </form>
             </div>
 
         </div>
 
-        <div id="eliminar">
+        <div id="filtrar">
+
+            <h2> Filtrar </h2>
+
+            <button type="submit" id="filtrarJugadorEquipo"> Equipo </button>
+
+            <button type="submit" id="filtrarJugadorPosicion"> Posicion </button>
+
+            <button type="submit" id="filtrarEquipoCiudad"> Ciudad </button>
 
         </div>
 
-        <div id="modificar">
 
-        </div>
-
-        botones -> eliminar y modificar
         listas -> equipos y jugadores
-        filtrar ->  j = equipo, posicion
-                    e = ciudad
 
     </div>
 
