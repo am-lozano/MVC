@@ -26,9 +26,14 @@ class Vista {
     }
 
     // funcion para limpiar el texto anterior del formulario
-    limpiarForm() {
-        this.formF.value = "";
-        this.formE.value = "";
+   limpiarForm() {
+        this.inputNombreE.value = "";
+        this.inputCiudadE.value = "";
+        this.inputEstadioE.value = "";
+        this.inputNombreF.value = "";
+        this.inputEdadF.value = "";
+        this.inputPosicionF.value = "";
+        this.inputfechaF.value = "";
     }
 
     // funcion para mostrar los futbolistas
