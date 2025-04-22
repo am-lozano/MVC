@@ -2,22 +2,22 @@ class Vista {
 
     // constructor
     constructor() {
-        this.formJ = document.getElementById("formJugador");
+        // inicializamos el formulario y los inputs
+        this.formF = document.getElementById("formFutbolista");
         this.formE = document.getElementById("formEquipo");
         this.inputNombreE = document.getElementById("nombreEquipo");
         this.inputCiudadE = document.getElementById("ciudadEquipo");
         this.inputEstadioE = document.getElementById("estadioEquipo");
-        this.inputNombreJ = document.getElementById("nombreJugador");
-        this.inputEdadJ = document.getElementById("edadJugador");
-        this.inputPosicionJ = document.getElementById("posicionJugador");
-        this.inputfechaJ = document.getElementById("fechaJugador");
-        this.lista = document.getElementById("#");
-        this.botonAnadirJ = document.getElementById("botonAnadirJugador");
+        this.inputNombreF = document.getElementById("nombreFutbolista");
+        this.inputEdadF = document.getElementById("edadFutbolista");
+        this.inputPosicionF = document.getElementById("posicionFutbolista");
+        this.inputfechaF = document.getElementById("fechaFutbolista");
+        // inicializamos la lista de futbolistas y equipos
+        this.listaFutbolistas = document.getElementById("listaFutbolistas");
+        this.listaEquipos = document.getElementById("listaEquipos");
+        // inicializamos los botones del formulario
+        this.botonAnadirF = document.getElementById("botonAnadirFutbolista");
         this.botonAnadirE = document.getElementById("botonAnadirEquipo");
-        this.botonModificarJ = document.getElementById("botonModificarJugador");
-        this.botonModificarE = document.getElementById("botonModificarEquipo");
-        this.botonEliminarJ = document.getElementById("botonEliminarJugador");
-        this.botonEliminarE = document.getElementById("botonEliminarEquipo");
     }
 
     // devolvemos el formulario
@@ -30,34 +30,36 @@ class Vista {
         this.formInput.value = "";
     }
 
-    // funcion para mostrar los jugadores
-    renderizarJug(jugador) {
+    // funcion para mostrar los futbolistas
+    renderizarFutbolista(futbolistas) {
         this.lista.innerHTML = "";
-        jugador.array.forEach(element => {
+        futbolista.array.forEach(element => {
             const fila = document.createElement("tr");
+            fila.id = element.id;
             fila.innerHTML = `
             <td> ${element.nombre} </td>
             <td> ${element.edad} </td>
             <td> ${element.posicion} </td>
             <td> ${element.fechanacimiento} </td>
-            <td> <button class="success-btn" data-id="#{element.id}"> Asignar Equipo </button> </td>
-            <td> <button class="success-btn" data-id="#{element.id}"> Eliminar Jugador </button> </td>
+            <td> <button class="success-btn" data-id="#${element.id}">Asignar Equipo</button> </td>
+            <td> <button class="success-btn" data-id="#${element.id}">Eliminar Futbolista</button> </td>
             `;
             this.lista.appendChild(fila);
         });
     }
 
     // funcion para mostrar los equipos
-    renderizarEquipo(equipo) {
+    renderizarEquipos(equipos) {
         this.lista.innerHTML = "";
         equipo.array.forEach(element => {
             const fila = document.createElement("tr");
+            fila.id = element.id;
             fila.innerHTML = `
             <td> ${element.nombre} </td>
             <td> ${element.ciudad} </td>
             <td> ${element.estadio} </td>
-            <td> <button class="success-btn" data-id="#{element.id}"> Agregar Jugador </button> </td>
-            <td> <button class="success-btn" data-id="#{element.id}"> Eliminar Jugador </button> </td>
+            <td> <button class="success-btn" data-id="#${element.id}">Agregar Futbolista</button> </td>
+            <td> <button class="success-btn" data-id="#${element.id}">Eliminar Futbolista</button> </td>
             `;
             this.lista.appendChild(fila);
         });

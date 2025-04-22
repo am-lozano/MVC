@@ -42,7 +42,7 @@ class ModeloFutbolista {
         return eliminado;
     }
 
-    //Método para asignar un jugador a un equipo
+    //Método para asignar un futbolista a un equipo
     asignarEquipo(idFutbolista, idEquipo) {
         let asignado = false;
         this.futbolistas.forEach(futbolista => {

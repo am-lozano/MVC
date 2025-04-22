@@ -26,7 +26,7 @@
                 <a class="nav-link active" aria-current="page" href="#"> Principal </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="navhtml/jugador.html" target="_blank"> Jugador </a>
+                <a class="nav-link" href="navhtml/futbolista.html" target="_blank"> Futbolista </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="navhtml/equipo.html" target="_blank"> Equipo </a>
@@ -57,41 +57,41 @@
                         <label for="estadio"> Estadio </label>
                         <input type="text" id="estadioEquipo" name="estadio">
     
-                        <button type="submit" id="botonAnadirEquipo"> Agregar </button>
-    
-                        <button type="submit" id="botonEliminarEquipo"> Eliminar </button>
-    
-                        <button type="submit" id="botonModificarEquipo"> Modificar </button>
+                        <button type="submit" id="botonAnadirEquipo">Agregar</button>
                     </fieldset>
                 </form>
             </div>
-    
+            
+            <table  id="listaEquipos">
+                <!-- Aqui se renderizan los equipos -->
+           </table>
+
             <br>
     
-            <!-- formulario jugador -->
+            <!-- formulario futbolista -->
             <div>
-                <form id="formEJugador">
+                <form id="formFutbolista">
                     <fieldset>
                         <label for="nombre"> Nombre </label>
-                        <input type="text" id="nombreJugador" name="nombre">
+                        <input type="text" id="nombreFutbolista" name="nombre">
     
                         <label for="edad"> Edad </label>
-                        <input type="number" id="edadJugador" name="edad">
+                        <input type="number" id="edadFutbolista" name="edad">
     
                         <label for="posicion"> Posicion </label>
-                        <input type="text" id="posicionJugador" name="posicion">
+                        <input type="text" id="posicionFutbolista" name="posicion">
     
                         <label for="fecha"> Fecha de nacimiento </label>
-                        <input type="text" id="fechaJugador" name="fecha">
+                        <input type="text" id="fechaFutbolista" name="fecha">
     
-                        <button type="submit" id="botonAnadirJugador"> Agregar </button>
-    
-                        <button type="submit" id="botonEliminarJugador"> Eliminar </button>
-                        
-                        <button type="submit" id="botonModificarJugador"> Modificar </button>
+                        <button type="submit" id="botonAnadirFutbolista">Agregar</button>
                     </fieldset>
                 </form>
             </div>
+
+            <table  id="listaFutbolistas">
+                <!-- Aqui se renderizan los futbolistas -->
+           </table>
 
         </div>
 
@@ -99,17 +99,13 @@
 
             <h2> Filtrar </h2>
 
-            <button type="submit" id="filtrarJugadorEquipo"> Equipo </button>
+            <button type="submit" id="filtrarFutbolistaEquipo"> Equipo </button>
 
-            <button type="submit" id="filtrarJugadorPosicion"> Posicion </button>
+            <button type="submit" id="filtrarFutbolistaPosicion"> Posicion </button>
 
             <button type="submit" id="filtrarEquipoCiudad"> Ciudad </button>
 
         </div>
-
-
-        listas -> equipos y jugadores
-
     </div>
 
     <!-- coplyright -->
