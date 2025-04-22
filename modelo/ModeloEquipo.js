@@ -45,12 +45,24 @@ class ModeloEquipo {
 
     // Método para filtrar equipos por ciudad
     filtrarEquiposPorCiudad(ciudad) {
-        return this.equipos.filter(e => e.ciudad === ciudad);
+        let resultado = null;
+        this.equipos.forEach(e => {
+            if (e.ciudad === ciudad) {
+                resultado = e;
+            }
+        });
+        return resultado;
     }
 
     // Método para filtrar equipos por nomnbre
-    filtrarEquiposPorCiudad(nombre) {
-        return this.equipos.filter(e => e.nombre === nombre);
+    filtrarEquiposPorNombre(nombre) {
+        let resultado = null;
+        this.equipos.forEach(e => {
+            if (e.nombre === nombre) {
+                resultado = e;
+            }
+        });
+        return resultado;
     }
 
     //Método para mostrar todos los equipos
