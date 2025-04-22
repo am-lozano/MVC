@@ -19,20 +19,8 @@
 
 <body>
 
-    <!-- navegacion -->
-    <div id="contenedorNav" class="navegacion">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"> Principal </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="navhtml/futbolista.html" target="_blank"> Futbolista </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="navhtml/equipo.html" target="_blank"> Equipo </a>
-            </li>
-        </ul>
-    </div>
+    <!-- header -->
+    <header>APLICACION DEPORTIVA</header>
 
     <!-- cuerpo -->
     <div id="cuerpo">
@@ -42,14 +30,14 @@
             <!-- formulario equipo -->
             <div>
 
-                <h2> Agregar, Modificar o Eliminar </h2>
+                <h2> Agregar equipos </h2>
 
                 <form id="formEquipo">
                     <fieldset>
                         <label for="nombre"> Nombre </label>
                         <input type="text" id="nombreEquipo" name="nombre">
 
-                        <label for="cidudad"> Ciudad </label>
+                        <label for="ciudad"> Ciudad </label>
                         <input type="text" id="ciudadEquipo" name="ciudad">
 
                         <label for="estadio"> Estadio </label>
@@ -77,6 +65,9 @@
 
             <!-- formulario futbolista -->
             <div>
+
+                <h2> Agregar futbolistas </h2>
+
                 <form id="formFutbolista">
                     <fieldset>
                         <label for="nombre"> Nombre </label>
@@ -112,7 +103,7 @@
 
         </div>
 
-        <div id="filtrar">
+        <div id="filtros">
 
             <h2> Filtrar Jugadores </h2>
 
@@ -127,16 +118,43 @@
                         <th> Fecha de nacimiento </th>
                     </tr>
                 </thead>
-                <tbody id="listaFutbolistasFiltrados">
+                <tbody id="listaFutbolistasFiltradosEquipo">
                     <!-- Aqui se renderizan los futbolistas filtrados -->
                 </tbody>
             </table>
 
             <button type="button" id="filtrarFutbolistaPosicion"> Por posicion </button>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Edad </th>
+                        <th> Posicion </th>
+                        <th> Fecha de nacimiento </th>
+                    </tr>
+                </thead>
+                <tbody id="listaFutbolistasFitradosPosicion">
+                    <!-- Aqui se renderizan los futbolistas filtrados por posicion -->
+                </tbody>
+            </table>
+
             <h2> Filtrar Equipo </h2>
 
             <button type="button" id="filtrarEquipoCiudad"> Por ciudad </button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Ciudad </th>
+                        <th> Estadio </th>
+                    </tr>
+                </thead>
+                <tbody id="listaEquiposFitradosCiudad">
+                    <!-- Aqui se renderizan los equipos filtrados -->
+                </tbody>
+            </table>
 
         </div>
     </div>

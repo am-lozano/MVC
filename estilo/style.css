@@ -1,12 +1,10 @@
-.navegacion {
+header {
     background-color: #ffa500;
-    height: 100px;
-    padding-top: 30px;
-}
-
-.separador {
-    border-color: #ffa500;
-    border: 1px solid #ffa500;
+    color: rgb(254, 0, 0);
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 table {
@@ -52,7 +50,6 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin-bottom: 50px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -67,4 +64,29 @@ input {
     border: 1px solid #ffa500;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+#formularios {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ffa500;
+    border-radius: 10px;
+    background-color: #fff3e0;
+}
+
+#filtros {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ffa500;
+    border-radius: 10px;
+    background-color: #fff3e0;
+}
+
+div {
+    margin: 50px auto;
+}
+
+label {
+    font-weight: bold;
+    color: #ffa500;
 }
