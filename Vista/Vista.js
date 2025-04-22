@@ -20,11 +20,6 @@ class Vista {
         this.botonAnadirE = document.getElementById("botonAnadirEquipo");
     }
 
-    // devolvemos el formulario
-    getInput() {
-        return this.formInput.value;
-    }
-
     // funcion para limpiar el texto anterior del formulario
    limpiarForm() {
         this.inputNombreE.value = "";
