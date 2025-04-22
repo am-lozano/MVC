@@ -10,8 +10,61 @@
 }
 
 table {
-    border: 1px solid #ffa500;
+    border: 3px solid #ffa500;
     border-radius: 10px;
     margin: 20px auto;
     width: 80%;
+}
+
+th {
+    background-color: #ffa500;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #ffa500;
+}
+
+h2 {
+    text-align: center;
+    color: #ff0d00;
+}
+
+p {
+    text-align: center;
+    color: #ffa500;
+}
+
+a {
+    text-decoration: none;
+    color: #ffa500;
+}
+
+button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff8c00;
+}
+
+input {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
