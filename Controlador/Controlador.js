@@ -100,25 +100,26 @@ class Controlador {
         }
     }
 
-    // Metodo para actualizar un futbolista
+    // Metodo para asignar equipo a un futbolista
+    asignarEquipoAFutbolista(idFutbolista, nombreEquipo) {
+        if (this.modeloFutbolista.asignarEquipo(idFutbolista, nombreEquipo)) {
+            this.vista.renderizarFutbolistas(this.modeloFutbolista.mostrarFutbolistas());
+        } else {
+            alert("Error al asignar el futbolista al equipo.");
+        }
+    }
 
     // Metodo para actualizar un equipo
 
     // Metodo para comprobar el boton de futbolista
-    comprobarBotonFutbolista(event) {
-        if (event.target.tagName === "BUTTON" && event.target.textContent === "Eliminar Futbolista") { 
+   comprobarBotonFutbolista(event) {
+        if (event.target.tagName === "BUTTON" && event.target.textContent === "Eliminar Futbolista") {
             const id = parseInt(event.target.getAttribute("id")); // Obtener el id del futbolista
-            console.log(id); // Mostrar el id del futbolista a eliminar
             this.eliminarFutbolista(id); // Llamar al método para eliminar el futbolista
         } else if (event.target.tagName === "BUTTON" && event.target.textContent === "Asignar Equipo") {
             const id = parseInt(event.target.getAttribute("id")); // Obtener el id del futbolista
-            // Introucir el nombre del equipo al que se desea asignar el futbolista
-            const nombreEquipo = prompt("Ingrese el nombre del equipo al que desea asignar el futbolista:");
-            // Sacar nombre del equipo y buscar el equipo por su nombre
-            const equipo = this.modeloEquipo.mostrarEquipos().find(equipo => equipo.nombre === nombreEquipo);
-
-
-            this.asignarFutbolistaAEquipo(id, idEquipo); // Llamar al método para asignar el futbolista al equipo
+            const nombreEquipo = prompt("Ingrese el nombre del equipo al que desea asignar el futbolista:"); // Solicitar el nombre del equipo
+            this.asignarFutbolistaAEquipo(id, nombreEquipo); // Llamar al método para asignar el futbolista al equipo
         }
     }
 

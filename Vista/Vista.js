@@ -59,7 +59,7 @@ limpiarForm() {
             <td> ${element.nombre} </td>
             <td> ${element.ciudad} </td>
             <td> ${element.estadio} </td>
-            <td> <button class="success-btn" id="${element.id}">Agregar Futbolista</button> </td>
+            <td> <button class="success-btn" id="${element.id}">Modificar Equipo</button> </td>
             <td> <button class="success-btn" id="${element.id}">Eliminar Equipo</button> </td>
             `;
             this.listaEquipos.appendChild(fila);
