@@ -42,8 +42,8 @@ class Vista {
             <td> ${element.edad} </td>
             <td> ${element.posicion} </td>
             <td> ${element.fechanacimiento} </td>
-            <td> <button class="success-btn" data-id="#${element.id}">Asignar Equipo</button> </td>
-            <td> <button class="success-btn" data-id="#${element.id}">Eliminar Futbolista</button> </td>
+            <td> <button class="success-btn" id="${element.id}">Asignar Equipo</button> </td>
+            <td> <button class="success-btn" id="${element.id}">Eliminar Futbolista</button> </td>
             `;
             this.listaFutbolistas.appendChild(fila);
         });
@@ -59,8 +59,8 @@ class Vista {
             <td> ${element.nombre} </td>
             <td> ${element.ciudad} </td>
             <td> ${element.estadio} </td>
-            <td> <button class="success-btn" data-id="#${element.id}">Agregar Futbolista</button> </td>
-            <td> <button class="success-btn" data-id="#${element.id}">Eliminar Equipo</button> </td>
+            <td> <button class="success-btn" id="${element.id}">Agregar Futbolista</button> </td>
+            <td> <button class="success-btn" id="${element.id}">Eliminar Equipo</button> </td>
             `;
             this.listaEquipos.appendChild(fila);
         });

@@ -31,7 +31,7 @@ class ModeloEquipo {
 
     // Eliminar un equipo por ID y actualizar el localStorage
     eliminarEquipo(id) {
-        let elimnado = false;
+        let eliminado = false;
         this.equipos.forEach(equipo => {
             if (equipo.id === id) {
                 this.equipos.splice(this.equipos.indexOf(equipo), 1);
