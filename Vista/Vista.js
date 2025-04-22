@@ -18,17 +18,6 @@ class Vista {
         this.formInput.value = "";
     }
 
-    /**
-     * @param {*} falta
-     * anadir formularios para actualizar datos
-     * 
-     * @param {*} duda
-     * actualizarInfoJugador() y cambiarEquipo() ?????????????
-     * 
-     * @param {*} falta
-     * mostrar los jugadores con card bootstrap, y su info debajo
-     */
-
     // funcion para mostrar los jugadores
     renderizarJug(jugador) {
         this.lista.innerHTML = "";
