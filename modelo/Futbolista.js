@@ -32,7 +32,7 @@ class Futbolista {
         }else{
             this.fechnacimiento = fechanacimiento;
         }
-        this.idEquipo = null; // Inicializado como null, se puede establecer más tarde
+        this.nombreEquipo = null; // Inicializado como null, se puede establecer más tarde
 
         this.guardarFutbolista();
     }
@@ -58,7 +58,7 @@ class Futbolista {
     }
 
     getIdequipo() {
-        return this.idequipo;
+        return this.nombreEquipo;
     }
 
     // Setters
