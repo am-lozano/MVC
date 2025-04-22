@@ -43,11 +43,11 @@ class ModeloFutbolista {
     }
 
     //Método para asignar un futbolista a un equipo
-    asignarEquipo(idFutbolista, idEquipo) {
+    asignarEquipo(idFutbolista, nombreEquipo) {
         let asignado = false;
         this.futbolistas.forEach(futbolista => {
             if (futbolista.id === idFutbolista) {
-                futbolista.idEquipo = idEquipo;
+                futbolista.nombreEquipo = nombreEquipo;
                 localStorage.setItem('futbolistas', JSON.stringify(this.futbolistas));
                 asignado = true;
             }
