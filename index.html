@@ -34,8 +34,6 @@
         </ul>
     </div>
 
-    <!-- <hr class="separador"> -->
-
     <!-- cuerpo -->
     <div id="cuerpo">
 
@@ -62,9 +60,18 @@
                 </form>
             </div>
 
-            <ul id="listaEquipos">
-                <!-- Aqui se renderizan los equipos -->
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Ciudad </th>
+                        <th> Estadio </th>
+                    </tr>
+                </thead>
+                <tbody id="listaEquipos">
+                    <!-- Aqui se renderizan los futbolistas filtrados -->
+                </tbody>
+            </table>
 
             <br>
 
@@ -89,9 +96,19 @@
                 </form>
             </div>
 
-            <ul id="listaFutbolistas">
-                <!-- Aqui se renderizan los futbolistas -->
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Edad </th>
+                        <th> Posicion </th>
+                        <th> Fecha de nacimiento </th>
+                    </tr>
+                </thead>
+                <tbody id="listaFutbolistas">
+                    <!-- Aqui se renderizan los futbolistas filtrados -->
+                </tbody>
+            </table>
 
         </div>
 
@@ -100,6 +117,20 @@
             <h2> Filtrar Jugadores </h2>
 
             <button type="button" id="filtrarFutbolistaEquipo"> Por equipo </button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Edad </th>
+                        <th> Posicion </th>
+                        <th> Fecha de nacimiento </th>
+                    </tr>
+                </thead>
+                <tbody id="listaFutbolistasFiltrados">
+                    <!-- Aqui se renderizan los futbolistas filtrados -->
+                </tbody>
+            </table>
 
             <button type="button" id="filtrarFutbolistaPosicion"> Por posicion </button>
 
