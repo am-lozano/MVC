@@ -34,8 +34,6 @@
         </ul>
     </div>
 
-    <!-- <hr class="separador"> -->
-
     <!-- cuerpo -->
     <div id="cuerpo">
 
@@ -62,9 +60,9 @@
                 </form>
             </div>
 
-            <table id="listaEquipos">
+            <ul id="listaEquipos">
                 <!-- Aqui se renderizan los equipos -->
-            </table>
+            </ul>
 
             <br>
 
@@ -89,21 +87,37 @@
                 </form>
             </div>
 
-            <table id="listaFutbolistas">
+            <ul id="listaFutbolistas">
                 <!-- Aqui se renderizan los futbolistas -->
-            </table>
+            </ul>
 
         </div>
 
         <div id="filtrar">
 
-            <h2> Filtrar </h2>
+            <h2> Filtrar Jugadores </h2>
 
-            <button type="submit" id="filtrarFutbolistaEquipo"> Equipo </button>
+            <button type="button" id="filtrarFutbolistaEquipo"> Por equipo </button>
 
-            <button type="submit" id="filtrarFutbolistaPosicion"> Posicion </button>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Nombre </th>
+                        <th> Edad </th>
+                        <th> Posicion </th>
+                        <th> Fecha de nacimiento </th>
+                    </tr>
+                </thead>
+                <tbody id="listaFutbolistasFiltrados">
+                    <!-- Aqui se renderizan los futbolistas filtrados -->
+                </tbody>
+            </table>
 
-            <button type="submit" id="filtrarEquipoCiudad"> Ciudad </button>
+            <button type="button" id="filtrarFutbolistaPosicion"> Por posicion </button>
+
+            <h2> Filtrar Equipo </h2>
+
+            <button type="button" id="filtrarEquipoCiudad"> Por ciudad </button>
 
         </div>
     </div>
