@@ -57,24 +57,12 @@ class ModeloFutbolista {
 
     //Método para filtrar futbolistas por equipo
     filtrarFutbolistasPorEquipo(idEquipo) {
-        let resultado = null;
-        this.equipos.forEach(e => {
-            if (e.idEquipo === idEquipo) {
-                resultado = e;
-            }
-        });
-        return resultado;
+        return this.futbolistas.filter(f => f.idequipo === idEquipo);
     }
 
     //Método para filtrar futbolistas por posición
     filtrarFutbolistasPorPosicion(posicion) {
-        let resultado = null;
-        this.equipos.forEach(e => {
-            if (e.posicion === posicion) {
-                resultado = e;
-            }
-        });
-        return resultado;
+        return this.futbolistas.filter(f => f.posicion === posicion);
     }
 
     //Metodo para mostrar todos los futbolistas
