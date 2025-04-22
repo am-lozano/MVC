@@ -2,10 +2,22 @@ class Vista {
 
     // constructor
     constructor() {
-        this.form = document.getElementById("#");
-        this.formInput = document.getElementById("#");
+        this.formJ = document.getElementById("formJugador");
+        this.formE = document.getElementById("formEquipo");
+        this.inputNombreE = document.getElementById("nombreEquipo");
+        this.inputCiudadE = document.getElementById("ciudadEquipo");
+        this.inputEstadioE = document.getElementById("estadioEquipo");
+        this.inputNombreJ = document.getElementById("nombreJugador");
+        this.inputEdadJ = document.getElementById("edadJugador");
+        this.inputPosicionJ = document.getElementById("posicionJugador");
+        this.inputfechaJ = document.getElementById("fechaJugador");
         this.lista = document.getElementById("#");
-        this.boton = document.getElementById("#");
+        this.botonAnadirJ = document.getElementById("botonAnadirJugador");
+        this.botonAnadirE = document.getElementById("botonAnadirEquipo");
+        this.botonModificarJ = document.getElementById("botonModificarJugador");
+        this.botonModificarE = document.getElementById("botonModificarEquipo");
+        this.botonEliminarJ = document.getElementById("botonEliminarJugador");
+        this.botonEliminarE = document.getElementById("botonEliminarEquipo");
     }
 
     // devolvemos el formulario
