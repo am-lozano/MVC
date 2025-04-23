@@ -18,6 +18,10 @@ class Vista {
         // inicializamos los botones del formulario
         this.botonAnadirF = document.getElementById("botonAnadirFutbolista");
         this.botonAnadirE = document.getElementById("botonAnadirEquipo");
+        //Inicializamos el boton de los botones de filtrar
+        this.botonFiltrarFutbolistaEquipo = document.getElementById("filtrarFutbolistaEquipo");
+        this.botonFiltrarFutbolistaPosicion = document.getElementById("filtrarFutbolistaPosicion");
+        this.botonFiltrarEquipoCiudad = document.getElementById("filtrarEquipoCiudad");
     }
 
     // funcion para limpiar el texto anterior del formulario

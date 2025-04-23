@@ -19,6 +19,15 @@ class Controlador {
 
         // Comprueba el tipo de boton y crear el evento al pulsar para equipos
         this.vista.listaEquipos.addEventListener("click", (e) => this.comprobarBotonEquipo(e));
+
+        // Agregar el evento click al botón de filtrar futbolistas por equipo
+        this.vista.botonFiltrarFutbolistaEquipo.addEventListener("click", (e) => this.filtrarFutbolistasPorEquipo(e));
+
+        // Agregar el evento click al botón de filtrar futbolistas por posición
+        this.vista.botonFiltrarFutbolistaPosicion.addEventListener("click", (e) => this.filtrarFutbolistasPorPosicion(e));
+
+        // Agregar el evento click al botón de filtrar equipos por ciudad
+        this.vista.botonFiltrarEquipoCiudad.addEventListener("click", (e) => this.filtrarEquiposPorCiudad(e));
     }
 
     // Método para agregar un futbolista, validando los campos de entrada
@@ -67,10 +76,25 @@ class Controlador {
     }
 
     // Metodo para filtrar futbolistas por equipo
+    filtrarFutbolistasPorEquipo() {
+        const nombreEquipo = prompt("Ingrese el nombre del equipo para filtrar los futbolistas:"); // Solicitar el nombre del equipo
+        const futbolistasFiltrados = this.modeloFutbolista.filtrarFutbolistasPorEquipo(nombreEquipo); // Filtrar los futbolistas por equipo
+        this.vista.renderizarFutbolistas(futbolistasFiltrados); // Renderizar los futbolistas filtrados
+    }
 
     // Metodo para filtrar futbolistas por posicion
+    filtrarFutbolistasPorPosicion() {
+        const posicion = prompt("Ingrese la posición para filtrar los futbolistas:"); // Solicitar la posición
+        const futbolistasFiltrados = this.modeloFutbolista.filtrarFutbolistasPorPosicion(posicion); // Filtrar los futbolistas por posición
+        this.vista.renderizarFutbolistas(futbolistasFiltrados); // Renderizar los futbolistas filtrados
+    }
 
     // Metodo para filtrar equipos por ciudad
+    filtrarEquiposPorCiudad() {
+        const ciudad = prompt("Ingrese la ciudad para filtrar los equipos:"); // Solicitar la ciudad
+        const equiposFiltrados = this.modeloEquipo.filtrarEquiposPorCiudad(ciudad); // Filtrar los equipos por ciudad
+        this.vista.renderizarEquipos(equiposFiltrados); // Renderizar los equipos filtrados
+    }
 
     // Metodo para eliminar un futbolista
     eliminarFutbolista(id) {
