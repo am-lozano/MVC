@@ -14,7 +14,10 @@ class Vista {
         this.inputfechaF = document.getElementById("fechaFutbolista");
         // inicializamos la lista de futbolistas y equipos
         this.listaFutbolistas = document.getElementById("listaFutbolistas");
+        this.listaFutbolistasFiltradosEquipo = document.getElementById("listaFutbolistasFiltradosEquipo");
+        this.listaFutbolistasFiltradosPosicion = document.getElementById("listaFutbolistasFitradosPosicion");
         this.listaEquipos = document.getElementById("listaEquipos");
+        this.listaEquiposFiltradosCiudad = document.getElementById("listaEquiposFitradosCiudad");
         // inicializamos los botones del formulario
         this.botonAnadirF = document.getElementById("botonAnadirFutbolista");
         this.botonAnadirE = document.getElementById("botonAnadirEquipo");
@@ -54,6 +57,54 @@ limpiarForm() {
         });
     }
 
+    // funcion para mostrar los futbolistas por equipo
+    renderizarFutbolistasPorEquipo(futbolistas) {
+        this.listaFutbolistasFiltradosEquipo.innerHTML = "";
+        futbolistas.forEach(element => {
+            const fila = document.createElement("tr");
+            fila.id = element.id;
+            fila.innerHTML = `
+            <td> ${element.nombre} </td>
+            <td> ${element.edad} </td>
+            <td> ${element.posicion} </td>
+            <td> ${element.fechanacimiento} </td>
+            <td> ${element.nombreEquipo} </td>
+            `;
+            this.listaFutbolistasFiltradosEquipo.appendChild(fila);
+        });
+    }
+
+    // funcion para mostrar los futbolistas por posicion
+    renderizarFutbolistasPorPosicion(futbolistas) {
+        this.listaFutbolistasFiltradosPosicion.innerHTML = "";
+        futbolistas.forEach(element => {
+            const fila = document.createElement("tr");
+            fila.id = element.id;
+            fila.innerHTML = `
+            <td> ${element.nombre} </td>
+            <td> ${element.edad} </td>
+            <td> ${element.posicion} </td>
+            <td> ${element.fechanacimiento} </td>
+            <td> ${element.nombreEquipo} </td>
+            `;
+            this.listaFutbolistasFiltradosPosicion.appendChild(fila);
+        });
+    }
+
+    // funcion para mostrar los equipos por ciudad
+    renderizarEquiposPorCiudad(equipos) {
+        this.listaEquiposFiltradosCiudad.innerHTML = "";
+        equipos.forEach(element => {
+            const fila = document.createElement("tr");
+            fila.id = element.id;
+            fila.innerHTML = `
+            <td> ${element.nombre} </td>
+            <td> ${element.ciudad} </td>
+            <td> ${element.estadio} </td>
+            `;
+            this.listaEquiposFiltradosCiudad.appendChild(fila);
+        });
+    }
     // funcion para mostrar los equipos
     renderizarEquipos(equipos) {
         this.listaEquipos.innerHTML = "";

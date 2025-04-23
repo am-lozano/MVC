@@ -79,21 +79,21 @@ class Controlador {
     filtrarFutbolistasPorEquipo() {
         const nombreEquipo = prompt("Ingrese el nombre del equipo para filtrar los futbolistas:"); // Solicitar el nombre del equipo
         const futbolistasFiltrados = this.modeloFutbolista.filtrarFutbolistasPorEquipo(nombreEquipo); // Filtrar los futbolistas por equipo
-        this.vista.renderizarFutbolistas(futbolistasFiltrados); // Renderizar los futbolistas filtrados
+        this.vista.renderizarFutbolistasPorEquipo(futbolistasFiltrados); // Renderizar los futbolistas filtrados
     }
 
     // Metodo para filtrar futbolistas por posicion
     filtrarFutbolistasPorPosicion() {
         const posicion = prompt("Ingrese la posición para filtrar los futbolistas:"); // Solicitar la posición
         const futbolistasFiltrados = this.modeloFutbolista.filtrarFutbolistasPorPosicion(posicion); // Filtrar los futbolistas por posición
-        this.vista.renderizarFutbolistas(futbolistasFiltrados); // Renderizar los futbolistas filtrados
+        this.vista.renderizarFutbolistasPorPosicion(futbolistasFiltrados); // Renderizar los futbolistas filtrados
     }
 
     // Metodo para filtrar equipos por ciudad
     filtrarEquiposPorCiudad() {
         const ciudad = prompt("Ingrese la ciudad para filtrar los equipos:"); // Solicitar la ciudad
         const equiposFiltrados = this.modeloEquipo.filtrarEquiposPorCiudad(ciudad); // Filtrar los equipos por ciudad
-        this.vista.renderizarEquipos(equiposFiltrados); // Renderizar los equipos filtrados
+        this.vista.renderizarEquiposPorCiudad(equiposFiltrados); // Renderizar los equipos filtrados
     }
 
     // Metodo para eliminar un futbolista

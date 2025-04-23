@@ -56,8 +56,8 @@ class ModeloFutbolista {
     }
 
     //Método para filtrar futbolistas por equipo
-    filtrarFutbolistasPorEquipo(idEquipo) {
-        return this.futbolistas.filter(f => f.idequipo === idEquipo);
+    filtrarFutbolistasPorEquipo(nombreEquipo) {
+        return this.futbolistas.filter(f => f.nombreEquipo === nombreEquipo);
     }
 
     //Método para filtrar futbolistas por posición
